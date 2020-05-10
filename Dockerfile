@@ -7,4 +7,4 @@ RUN pip3 install -r /requirements.txt
 COPY . /app
 WORKDIR /app
 
-ENTRYPOINT ["./gunicorn_starter.sh"]
+ENTRYPOINT ["sh","./gunicorn_starter.sh"]
