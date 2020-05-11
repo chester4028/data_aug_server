@@ -36,7 +36,7 @@ class Worker(object):
             # print(text_translate)
             aug_sentence.add(text_translate)
             socketio.emit('newsentence', {'sentence': text_translate}, namespace='/sentence', room=sid)
-            socketio.sleep(0)
+            socketio.sleep(3)
         result = "結束  共" + str(len(aug_sentence)) +"句擴寫"
         socketio.emit('newsentence', {'sentence': result}, namespace='/sentence', room=sid)
 
